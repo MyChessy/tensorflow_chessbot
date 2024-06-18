@@ -1,18 +1,20 @@
 Step for Ubuntu 24.04 LTS x86_64
 ---
-1) Run `apt-get update`
-2) If python 3.7 was not install, install using following
-    a) `sudo apt install software-properties-common`
-    b) `sudo add-apt-repository ppa:deadsnakes/ppa`
-    c) `sudo apt update`
-    d) `sudo apt install python3.7 python3.7-distutils`
+1) Run `sudo apt-get update`
+2) If python 3.7 was not install, install using following steps:
+    - `sudo apt install software-properties-common` 
+    - `sudo add-apt-repository ppa:deadsnakes/ppa`
+    - `sudo apt update`
+    - `sudo apt install python3.7 python3.7-distutils`
 3) `sudo apt-get install python3-virtualenv`
 4) `git clone https://github.com/Elucidation/tensorflow_chessbot`
 5) `cd tensorflow_chessbot`
 6) `git checkout chessfenbot`
 7) `virtualenv --python=/usr/bin/python3.7 venv`
 8) `source venv/bin/activate`
-9) `pip3 install -r requirements.txt`
+9) Add `protobuf==3.20.*` at first line of `requirements.txt`
+10) `pip3 install -r requirements.txt`
+11) Run `./tensorflow_chessbot.py --filepath example_input.png` and will show <br>`Predicted FEN: bn4kN/p5bp/1p3npB/3p4/8/5Q2/PPP2PPP/R3R1K1`
 
 
 
